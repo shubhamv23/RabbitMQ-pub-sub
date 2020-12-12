@@ -1,0 +1,14 @@
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/apis/orders/request/User.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/service/orders/entity/OrderEntity.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/apis/orders/request/Order.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/service/orders/OrderService.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/apis/orders/request/Product.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/utils/rabbitmq/RabbitMQPublisher.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/apis/orders/controller/EventPublishController.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/utils/rabbitmq/RabbitMQConfiguration.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/apis/orders/request/Address.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/utils/rabbitmq/RabbitMQProperties.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/service/orders/OrderConverter.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/service/orders/repository/OrderRepository.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/PublisherApplication.java
+/Users/shubham verma/Downloads/publisher/src/main/java/com/example/publisher/apis/orders/request/Recipient.java

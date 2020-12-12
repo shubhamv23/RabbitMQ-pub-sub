@@ -1,0 +1,14 @@
+com/example/publisher/apis/orders/request/Order.class
+com/example/publisher/apis/orders/request/Recipient.class
+com/example/publisher/PublisherApplication.class
+com/example/publisher/apis/orders/controller/EventPublishController.class
+com/example/publisher/service/orders/OrderService.class
+com/example/publisher/service/orders/OrderConverter.class
+com/example/publisher/apis/orders/request/Product.class
+com/example/publisher/utils/rabbitmq/RabbitMQProperties.class
+com/example/publisher/service/orders/repository/OrderRepository.class
+com/example/publisher/apis/orders/request/User.class
+com/example/publisher/utils/rabbitmq/RabbitMQConfiguration.class
+com/example/publisher/apis/orders/request/Address.class
+com/example/publisher/utils/rabbitmq/RabbitMQPublisher.class
+com/example/publisher/service/orders/entity/OrderEntity.class
