@@ -52,7 +52,7 @@ public class RabbitMQSubscriber {
 	}
 
 	//fanout exchange queue1
-	@RabbitListener(queues = "fanoutExchangeQueue1")
+	@RabbitListener(queues = "fanoutQueue1")
 	public void receiveMessageForFanoutExchangeQueue1(@Payload final Order order, Message message) {
 		log.info("Exchange name: {}", message.getMessageProperties().getReceivedExchange());
 		log.info("Queue name: {}", message.getMessageProperties().getConsumerQueue());
@@ -61,7 +61,7 @@ public class RabbitMQSubscriber {
 	}
 
 	//fanout exchange queue2
-	@RabbitListener(queues = "fanoutExchangeQueue2")
+	@RabbitListener(queues = "fanoutQueue2")
 	public void receiveMessageForFanoutExchangeQueue2(@Payload final Order order, Message message) {
 		log.info("Exchange name: {}", message.getMessageProperties().getReceivedExchange());
 		log.info("Queue name: {}", message.getMessageProperties().getConsumerQueue());
@@ -69,8 +69,8 @@ public class RabbitMQSubscriber {
 		log.info("Received message: {} from fanoutExchangeQueue2 queue from FANOUT exchange.", order);
 	}
 
-	//fanout exchange queue2
-	@RabbitListener(queues = "fanoutExchangeQueue3")
+	//fanout exchange queue3
+	@RabbitListener(queues = "fanoutQueue3")
 	public void receiveMessageForFanoutExchangeQueue3(@Payload final Order order, Message message) {
 		log.info("Exchange name: {}", message.getMessageProperties().getReceivedExchange());
 		log.info("Queue name: {}", message.getMessageProperties().getConsumerQueue());

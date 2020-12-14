@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <liquibase.version>3.4.1</liquibase.version>
+        <!--        <liquibase.version>3.4.1</liquibase.version>-->
     </properties>
 
     <dependencies>
@@ -53,20 +53,24 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>mysql</groupId>-->
+        <!--            <artifactId>mysql-connector-java</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.liquibase</groupId>-->
+        <!--            <artifactId>liquibase-core</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -76,53 +80,53 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>${liquibase.version}</version>
-                <configuration>
-                    <propertyFile>${liquibase.properties}</propertyFile>
-                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
-                    <changeLogFile>database/changelog-master.xml</changeLogFile>
-                    <diffChangeLogFile>src/main/resources/database/diffchangelog-${project.version}.xml</diffChangeLogFile>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-beans</artifactId>
-                        <version>4.1.7.RELEASE</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.springframework.data</groupId>
-                        <artifactId>spring-data-jpa</artifactId>
-                        <version>1.7.3.RELEASE</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.liquibase</groupId>-->
+            <!--                <artifactId>liquibase-maven-plugin</artifactId>-->
+            <!--                <version>${liquibase.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    <propertyFile>${liquibase.properties}</propertyFile>-->
+            <!--                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>-->
+            <!--                    <changeLogFile>database/changelog-master.xml</changeLogFile>-->
+            <!--                    <diffChangeLogFile>src/main/resources/database/diffchangelog-${project.version}.xml</diffChangeLogFile>-->
+            <!--                </configuration>-->
+            <!--                <dependencies>-->
+            <!--                    <dependency>-->
+            <!--                        <groupId>org.springframework</groupId>-->
+            <!--                        <artifactId>spring-beans</artifactId>-->
+            <!--                        <version>4.1.7.RELEASE</version>-->
+            <!--                    </dependency>-->
+            <!--                    <dependency>-->
+            <!--                        <groupId>org.springframework.data</groupId>-->
+            <!--                        <artifactId>spring-data-jpa</artifactId>-->
+            <!--                        <version>1.7.3.RELEASE</version>-->
+            <!--                    </dependency>-->
+            <!--                </dependencies>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>local</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <liquibase.properties>src/main/resources/properties/liquibase/liquibase-local.properties</liquibase.properties>
-            </properties>
-        </profile>
-        <profile>
-            <id>test</id>
-            <activation>
-                <property>
-                    <name>profile</name>
-                    <value>test</value>
-                </property>
-            </activation>
-            <properties>
-                <liquibase.properties>src/main/resources/properties/liquibase/liquibase-test.properties</liquibase.properties>
-            </properties>
-        </profile>
-    </profiles>
+    <!--    <profiles>-->
+    <!--        <profile>-->
+    <!--            <id>local</id>-->
+    <!--            <activation>-->
+    <!--                <activeByDefault>true</activeByDefault>-->
+    <!--            </activation>-->
+    <!--            <properties>-->
+    <!--                <liquibase.properties>src/main/resources/properties/liquibase/liquibase-local.properties</liquibase.properties>-->
+    <!--            </properties>-->
+    <!--        </profile>-->
+    <!--        <profile>-->
+    <!--            <id>test</id>-->
+    <!--            <activation>-->
+    <!--                <property>-->
+    <!--                    <name>profile</name>-->
+    <!--                    <value>test</value>-->
+    <!--                </property>-->
+    <!--            </activation>-->
+    <!--            <properties>-->
+    <!--                <liquibase.properties>src/main/resources/properties/liquibase/liquibase-test.properties</liquibase.properties>-->
+    <!--            </properties>-->
+    <!--        </profile>-->
+    <!--    </profiles>-->
 </project>
